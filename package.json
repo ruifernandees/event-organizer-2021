@@ -2,5 +2,8 @@
   "name": "event-organizer-2021",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
 }
