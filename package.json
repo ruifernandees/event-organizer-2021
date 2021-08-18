@@ -2,8 +2,14 @@
   "name": "event-organizer-2021",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "jest"
+  },
   "devDependencies": {
-    "jest": "^27.0.6"
-  }
+    "@sucrase/jest-plugin": "^2.1.1",
+    "jest": "^27.0.6",
+    "sucrase": "^3.20.1"
+  },
+  "dependencies": {}
 }
