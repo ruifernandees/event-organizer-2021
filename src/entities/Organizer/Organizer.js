@@ -1,5 +1,5 @@
-import { Lecture } from "./Lecture";
-import { LectureSet } from "./LectureSet";
+import { Lecture } from "../Lecture";
+import { LectureSet } from "../LectureSet";
 
 export class Organizer
 {
