@@ -1,15 +1,22 @@
 {
   "name": "event-organizer-2021",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node ./src/index.js",
-    "test": "jest"
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "start": "node ./dist/index.js",
+    "test": "jest",
+    "dev": "nodemon ./src/index.js"
   },
   "devDependencies": {
     "@sucrase/jest-plugin": "^2.1.1",
     "jest": "^27.0.6",
-    "sucrase": "^3.20.1"
+    "nodemon": "^2.0.12",
+    "sucrase": "^3.20.1",
+    "supertest": "^6.1.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.17.1",
+    "multer": "^1.4.3"
+  }
 }

@@ -3,7 +3,7 @@ import { OrganizeEventUseCase } from "../OrganizeEventUseCase";
 import { event } from "./mocks/event";
 import { lectures } from './mocks/lectures';
 import { lecturesShuffled } from "./mocks/lecturesShuffled";
-import duplicatedLectures from './mocks/duplicatedLectures.json';
+import duplicatedLecturesEvent from './mocks/duplicatedLecturesEvent.json';
 
 describe("Organize Event Use Case", () => {
     it ("Should return right result", () => {
@@ -50,14 +50,15 @@ describe("Organize Event Use Case", () => {
             const newLecture = new Lecture(
                 lecture.title + " v2",
                 lecture.timeInMinutes,
-                lecture.rawTitle,
+                lecture.rawTitle + " v2",
                 lecture.hour
             );
             return newLecture;
         });
 
+        
         const result = organizeEventUseCase.execute(lectures.concat(newLectures));
 
-        expect(JSON.stringify(result)).toBe(JSON.stringify(duplicatedLectures));
+        expect(JSON.stringify(result)).toBe(JSON.stringify(duplicatedLecturesEvent));
     });
 });
