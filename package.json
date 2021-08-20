@@ -12,7 +12,8 @@
     "@sucrase/jest-plugin": "^2.1.1",
     "jest": "^27.0.6",
     "nodemon": "^2.0.12",
-    "sucrase": "^3.20.1"
+    "sucrase": "^3.20.1",
+    "supertest": "^6.1.6"
   },
   "dependencies": {
     "express": "^4.17.1",
