@@ -1,10 +1,14 @@
 import express from 'express';
 import multer from 'multer';
 
-const routes = express.Router();
+import multerConfig from './config/multer';
+import { EventsController } from './controllers/EventsController';
 
-routes.get('/', (request, response) => {
-    response.json({ message: "Hello World" });
-});
+const routes = express.Router();
+const upload = multer(multerConfig).single('file');
+
+const eventsController = new EventsController();
+
+routes.post('/events', upload, eventsController.store);
 
 export default routes;
