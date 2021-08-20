@@ -50,12 +50,13 @@ describe("Organize Event Use Case", () => {
             const newLecture = new Lecture(
                 lecture.title + " v2",
                 lecture.timeInMinutes,
-                lecture.rawTitle,
+                lecture.rawTitle + " v2",
                 lecture.hour
             );
             return newLecture;
         });
 
+        
         const result = organizeEventUseCase.execute(lectures.concat(newLectures));
 
         expect(JSON.stringify(result)).toBe(JSON.stringify(duplicatedLectures));
