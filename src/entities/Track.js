@@ -30,6 +30,9 @@ export class Track
     
             return lecture;
         });
+
+        currentHour = 720;
+
         this.morning.lectures.push(new Lecture(
             "Almoço",
             0,
@@ -50,6 +53,12 @@ export class Track
 
             return lecture;
         });
+
+        if (currentHour < 960)
+        {
+            currentHour = 960;
+        }
+
         this.afternoon.lectures.push(new Lecture(
             "Evento de Networking",
             0,
