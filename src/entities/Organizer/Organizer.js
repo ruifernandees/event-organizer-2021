@@ -1,12 +1,14 @@
-import { Lecture } from "../Lecture";
 import { LectureSet } from "../LectureSet";
 
+/**
+ * Class Organizer
+ */
 export class Organizer
 {
 	/**
 	 * Class constructor
-	 * @param array lectures : Array of lectures
-	 * @param number maxTrackSize
+	 * @param Lecture[] lectures
+	 * @param number maxMinutes
 	 */
 	constructor(lectures, maxMinutes)
 	{
@@ -16,6 +18,9 @@ export class Organizer
 		this.test = [];
 	}
 	
+	/**
+	 * It generates the base matrix for the knapsack top-down algorithm
+	 */
 	rawDataBootstrap()
 	{
 		this.rawData = [];
@@ -31,6 +36,12 @@ export class Organizer
 		}
 	}
 
+	/**
+	 * It gets the best combination between all lectures using the knapsack top-down algorithm
+	 * @param number iterator 
+	 * @param number minutesResting 
+	 * @returns LectureSet
+	 */
 	getBestCombination(iterator, minutesResting)
 	{
 		if (iterator === this.lectures.length) 

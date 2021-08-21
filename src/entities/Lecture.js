@@ -1,8 +1,13 @@
+/**
+ * Class Lecture
+ */
 export class Lecture
 {
     /**
      * @param string title 
-     * @param number time 
+     * @param number timeInMinutes
+     * @param string rawTitle 
+     * @param string hour 
      */
     constructor(title, timeInMinutes, rawTitle, hour = "")
     {
