@@ -24,7 +24,7 @@ Note: it requires yarn or npm installed
 > Initial steps
 ```bash
 $ git clone https://github.com/ruifernandees/event-organizer-2021.git
-$ cd event-organizer
+$ cd event-organizer-2021
 # Install all dependencies
 $ yarn install
 ```
