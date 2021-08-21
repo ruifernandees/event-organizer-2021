@@ -1,7 +1,16 @@
 import { Lecture } from "./Lecture";
 
+/**
+ * Class Track
+ */
 export class Track
 {
+    /**
+     * Track constructor 
+     * @param string title 
+     * @param LectureSet morning 
+     * @param LectureSet afternoon 
+     */
     constructor(title, morning, afternoon)
     {
         this.title = title;
@@ -15,6 +24,9 @@ export class Track
         this.endAfternoonHour = 17 * 60;
     }
 
+    /**
+     * It generates the hour of each lecture in the event
+     */
     setLectureHours()
     {
         let currentHour = 0;
@@ -67,6 +79,11 @@ export class Track
         ));
     }
 
+    /**
+     * It converts the current hour (in minutes) to 24-hour format (string)
+     * @param number numberHour (in minutes)
+     * @returns string
+     */
     numberToHour(numberHour)
     {
         let hours = String(Math.floor(numberHour / 60));

@@ -2,10 +2,20 @@ import dict from '../../helpers/dict';
 import { Organizer } from "../../entities/Organizer/Organizer";
 import { Track } from "../../entities/Track";
 
+/**
+ * Class OrganizeEventUseCase
+ */
 export class OrganizeEventUseCase
 {
+    /**
+     * OrganizeEventUseCase constructor
+     */
     constructor() {}
 
+    /**
+     * @param Lecture[] lectures 
+     * @returns Track[]
+     */
     execute(lectures)
     {
         const maxMinutesMorning = 180;

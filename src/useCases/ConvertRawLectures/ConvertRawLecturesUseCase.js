@@ -1,9 +1,19 @@
 import { Lecture } from "../../entities/Lecture";
 
+/**
+ * Class ConvertRawLecturesUseCase
+ */
 export class ConvertRawLecturesUseCase
 {
+    /**
+     * ConvertRawLecturesUseCase constructor
+     */
     constructor() {}
 
+    /**
+     * @param string[] rawLectures 
+     * @returns Lecture[]
+     */
     execute(rawLectures)
     {
         const lectures = [];

@@ -3,8 +3,15 @@ import fs from 'fs';
 import { ConvertRawLecturesUseCase } from '../useCases/ConvertRawLectures/ConvertRawLecturesUseCase';
 import { OrganizeEventUseCase } from '../useCases/OrganizeEventUseCase/OrganizeEventUseCase';
 
+/**
+ * Class EventsController
+ */
 export class EventsController
 {
+    /**
+     * @param request 
+     * @param response 
+     */
     async store(request, response)
     {
         const { file } = request;
