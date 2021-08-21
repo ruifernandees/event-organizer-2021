@@ -31,11 +31,6 @@ export class Organizer
 		}
 	}
 
-	organize()
-	{
-		
-	}
-
 	getBestCombination(iterator, minutesResting)
 	{
 		if (iterator === this.lectures.length) 
