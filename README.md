@@ -3,6 +3,10 @@
 ## 📝 Description
 Event Organizer 2021 is a Node.js REST API that converts a file with lectures and the time of each into an organized JSON with all tracks, sessions and hours.
 
+It uses:
+- The Knapsack algorithm to organize the event and get the best combination between the lectures
+- Concepts of Clean Architecture.
+
 ### Endpoints
 The application have only one endpoint __('/events' - POST Method)__, which gets a .txt file as input (multipart/form-data) and returns a JSON by output.
 
